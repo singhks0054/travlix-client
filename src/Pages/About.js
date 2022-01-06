@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './Css/About.module.css'
 import Button from '../Components/Button'
 import Prac from '../Components/Prac'
+import Modal from '../Components/Modal'
 export default function About() {
+
+  const [error, setError] = useState(true)
+  const errorHandler = (e) => {
+    e.preventDefault();
+    setError(null);
+  }
   return (
     <main className={style.about}>
       <section className={style.main}>
         <h1>ABOUT US</h1>
       </section>
+      {error && <Modal error={errorHandler} title={'An Error Occurred !'} message={'Something went wrong .'} />}
       <section className={style.sec2}>
         <img src="./images/greentree.webp" alt="" />
         <div>

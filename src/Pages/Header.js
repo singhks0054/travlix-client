@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import style from './Css/Header.module.css'
 export default function Header(props) {
   const [openNav, setOpenNav] = useState(false)
@@ -18,21 +18,21 @@ export default function Header(props) {
         <img src="./images/logo.webp" alt="" /> <span className={style.logo}>TRAVLIX</span>
       </div>
       <nav className={`${style.navlink} ${style.mobile}`}>
-        <Link to='/'>HOME</Link>
-        <Link to='/about'>ABOUT US</Link>
-        <Link to='/news'>NEWS</Link>
-        <Link to='/offer'>OFFERS</Link>
-        <Link to='/contact'>CONTACT</Link>
-        <Link to='/user'>{isLogin ? 'USER' : 'LOG IN'}</Link>
+        <NavLink to='/'>HOME</NavLink>
+        <NavLink to='/about'>ABOUT US</NavLink>
+        <NavLink to='/news'>NEWS</NavLink>
+        <NavLink to='/offer'>OFFERS</NavLink>
+        <NavLink to='/contact'>CONTACT</NavLink>
+        <NavLink to='/user'>{isLogin ? 'USER' : 'LOG IN'}</NavLink>
       </nav>
       {
         openNav && <nav className={`${style.navlink} ${style.ismobile}`}>
-          <Link to='/'>HOME</Link>
-          <Link to='/about'>ABOUT US</Link>
-          <Link to='/news'>NEWS</Link>
-          <Link to='/offer'>OFFERS</Link>
-          <Link to='/contact'>CONTACT</Link>
-          <Link to='/user'>{isLogin ? 'USER' : 'LOG IN'}</Link>
+          <NavLink to='/'>HOME</NavLink>
+          <NavLink to='/about'>ABOUT US</NavLink>
+          <NavLink to='/news'>NEWS</NavLink>
+          <NavLink to='/offer'>OFFERS</NavLink>
+          <NavLink to='/contact'>CONTACT</NavLink>
+          <NavLink to='/user'>{isLogin ? 'USER' : 'LOG IN'}</NavLink>
         </nav>
       }
       <div>
