@@ -1,0 +1,8 @@
+h1{
+  text-align: center;
+}
+.border{
+  background: rgb(245,155,37);
+  background: linear-gradient(90deg, rgba(245,155,37,1) 15%, rgba(147,83,243,1) 85%);
+  height: 3px;
+}

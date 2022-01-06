@@ -1,0 +1,70 @@
+.section_ {
+  width: 80vw;
+  padding: 7vh 0;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  background: white;
+}
+.section_ h2 {
+  margin: 5vh 0 1vh 0;
+}
+.textbtn {
+  margin: 4vh;
+}
+.desc {
+  margin: 3vh;
+  line-height: 2rem;
+}
+.section {
+  text-align: center;
+  height: 50vh;
+  width: 20vw;
+  background: white;
+  margin: 2vh 0;
+  padding: 4vh 0;
+}
+.date {
+  background: orange;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1vh 2vw;
+}
+.section h3 {
+  padding-top: 5vh;
+  font-size: 40px;
+  color: white;
+}
+.section div {
+  padding: 1vh 0;
+}
+.btn {
+  position: relative;
+  bottom: -10vh;
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+  .section {
+    width: 80vw;
+    margin-top: 5vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  .section_ {
+    width: 90vw;
+  }
+  .section_ h2 {
+    margin: 0vh 0 1vh 0;
+  }
+  .desc {
+    margin: 3vh;
+    text-align: justify;
+  }
+}

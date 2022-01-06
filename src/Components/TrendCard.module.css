@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  justify-content: flex-start;
+}
+.card a {
+  color: black;
+  font-weight: 700;
+}
+.card a:hover {
+  color: orange;
+}
+h3 {
+  color: orange;
+}
+.text {
+  margin: 1vh 0 0 2vh;
+}
+.text p {
+  margin: 1.5vh 0;
+  color: rgb(226, 150, 7);
+}
+.card img {
+  margin: 1vh;
+}

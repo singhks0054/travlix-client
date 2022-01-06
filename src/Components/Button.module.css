@@ -1,0 +1,36 @@
+.btn {
+  background: linear-gradient(
+    131deg,
+    rgba(245, 155, 37, 1) 18%,
+    rgba(108, 43, 207, 1) 79%
+  );
+  outline: none;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 2vh 2vw;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: 1s;
+}
+.btn:hover {
+  background: linear-gradient(
+    131deg,
+    rgba(108, 43, 207, 1) 18%,
+    rgba(245, 155, 37, 1) 78%
+  );
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 576px) {
+  .btn {
+    padding: 2vh 8vw;
+  }
+}

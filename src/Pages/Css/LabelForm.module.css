@@ -1,0 +1,107 @@
+.main {
+  padding: 70px 0;
+  background: rgb(245, 155, 37);
+  background: linear-gradient(
+    90deg,
+    rgba(245, 155, 37, 1) 15%,
+    rgba(147, 83, 243, 1) 85%
+  );
+}
+.form {
+  background: rgb(245, 155, 37);
+  background: linear-gradient(
+    90deg,
+    rgba(245, 155, 37, 1) 15%,
+    rgba(147, 83, 243, 1) 85%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form div {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+}
+.form label {
+  color: white;
+  font-weight: 500;
+  display: block;
+}
+.form input,
+select {
+  font-size: 16px;
+  height: 50px;
+  padding: 1vh;
+  border-radius: 7px;
+  border: none;
+  margin: 2vh 3vh 2vh 0;
+  display: block;
+}
+.form a {
+  margin-top: 2vh;
+}
+.navbar {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  background-color: white;
+  border-radius: 200px;
+  margin-left: 10vw;
+}
+.navbar a {
+  color: black;
+  padding: 2vh 2vw;
+  font-size: 25px;
+  border-radius: 200px;
+}
+.navbar a:hover {
+  background-color: rgb(247, 232, 29);
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+  .form {
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form input,
+  select {
+    width: 80vw;
+  }
+  .navbar {
+    position: inherit;
+    flex-direction: column;
+    border-radius: 1px;
+
+    align-items: flex-start;
+  }
+  .navbar a {
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 0px;
+  }
+  .navbar a img {
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navbar {
+    display: none;
+  }
+  .form input,
+  select {
+    width: 80vw;
+  }
+  .form div {
+    text-align: left;
+  }
+}

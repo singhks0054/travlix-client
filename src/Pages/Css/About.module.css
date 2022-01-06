@@ -1,0 +1,114 @@
+.main {
+  background: url('https://source.unsplash.com/1400x400/?ocean');
+  height: 50vh;
+  background-size: cover;
+}
+.main h1 {
+  color: white;
+  font-size: 100px;
+  padding-top: 25vh;
+}
+.sec2 {
+  display: flex;
+  align-items: center;
+  padding: 5vh;
+}
+p {
+  text-align: justify;
+}
+.sec2 img {
+  width: 50vw;
+}
+.sec2 div {
+  display: flex;
+  flex-direction: column;
+}
+.sec3 {
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 0;
+  align-items: center;
+}
+.sec3 p {
+  width: 80vw;
+  margin: auto;
+}
+.sec3 h1 {
+  padding: 5vh;
+}
+.tile {
+  height: 50vh;
+  width: 80vw;
+  margin: auto;
+  background: url('https://source.unsplash.com/768x400/?beach');
+  background-size: cover;
+}
+.sec2 h1 {
+  margin: 5vh 0;
+}
+.sec2 p {
+  margin: 5vh 0;
+}
+.btn {
+  width: 30vw;
+  margin: auto;
+}
+.tile h1 {
+  text-align: start;
+  font-size: 50px;
+  padding-top: 10vh;
+  padding-left: 5vh;
+  color: white;
+}
+.tile h2 {
+  position: relative;
+  margin-top: 5vh;
+  color: white;
+  padding-left: 5vh;
+}
+.tile div {
+  margin-left: 5vh;
+  padding-top: 6vh;
+}
+.counter {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 5vh 0;
+}
+.counter div {
+  margin: auto;
+  text-align: center;
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+  .sec2 {
+    flex-direction: column;
+    padding: 0 5vh;
+  }
+  .sec2 img {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main h1 {
+    color: white;
+    font-size: 50px;
+    padding-top: 25vh;
+  }
+  .sec2 img {
+    width: 100vw;
+  }
+  .btn {
+    width: auto;
+    margin: auto;
+  }
+}

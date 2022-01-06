@@ -1,0 +1,20 @@
+.container {
+  width: 80vw;
+  margin: auto;
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90vw;
+  }
+}

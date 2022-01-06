@@ -1,0 +1,66 @@
+.offer {
+  display: flex;
+  margin: 4vh;
+}
+.price span {
+  font-size: 3rem;
+  color: orange;
+}
+.img img {
+  width: 20vw;
+}
+.title {
+  padding: 1vh 2vw;
+  bottom: 8vh;
+  position: relative;
+  background: yellow;
+  border-radius: 20px;
+}
+.textcon {
+  display: flex;
+  color: grey;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2vw;
+  text-align: left;
+}
+.textcon p {
+  margin: 3vh 0;
+}
+.textcon a {
+  color: black;
+}
+.textcon a:hover {
+  color: orange;
+}
+.icon {
+  margin: 1vh 1vh 3vh 0;
+}
+.icon img {
+  padding: 1vh;
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+  .img img {
+    width: 22vw;
+  }
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+  .img img {
+    width: 30vw;
+  }
+  .price span {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .img img {
+    width: 80vw;
+  }
+  .offer {
+    flex-direction: column;
+  }
+}

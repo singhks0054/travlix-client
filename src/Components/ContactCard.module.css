@@ -1,0 +1,95 @@
+.card {
+  padding: 7vh;
+  background: rgb(245, 155, 37);
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 155, 37, 1) 15%,
+    rgba(147, 83, 243, 1) 85%
+  );
+}
+.card h1 {
+  margin: 3vh;
+  font-size: 3rem;
+  color: white;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: auto;
+}
+.formdiv {
+  display: flex;
+  width: 100%;
+}
+.formdiv input {
+  width: 100%;
+}
+.form input,
+textarea {
+  margin: 1vh 2vw;
+  padding: 1vh;
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  border-bottom: 2px solid white;
+  font-size: 16px;
+}
+.btn {
+  background: linear-gradient(
+    131deg,
+    rgba(245, 155, 37, 1) 18%,
+    rgba(108, 43, 207, 1) 79%
+  );
+  outline: none;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 2vh 2vw;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: 1s;
+}
+.btn:hover {
+  background: linear-gradient(
+    131deg,
+    rgba(108, 43, 207, 1) 18%,
+    rgba(245, 155, 37, 1) 78%
+  );
+}
+.btncon {
+  margin: 5vh;
+  text-align: center;
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 576px) {
+  .card {
+    padding: 2vh;
+  }
+  .card h1 {
+    margin: 2vh;
+    font-size: 2rem;
+  }
+  .form {
+    width: 90vw;
+  }
+  .formdiv {
+    flex-direction: column;
+  }
+  .form input,
+  textarea,
+  .formdiv input {
+    width: 90%;
+    margin: 1vh 0vw;
+    padding: 1vh 0;
+  }
+}

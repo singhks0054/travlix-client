@@ -1,0 +1,55 @@
+.logo {
+  color: white;
+  font-weight: 500;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(87, 25, 180, 0.829);
+  position: sticky;
+  padding: 1vh 0;
+  top: 0;
+}
+.navigation nav a {
+  padding: 1vh 2vw;
+}
+.ismobile {
+  display: none;
+}
+.open {
+  display: none;
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+  .navigation {
+    background-color: rgba(87, 25, 180);
+  }
+  .mobile {
+    display: none;
+  }
+  .open {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+  }
+  .navlink {
+    text-align: center;
+  }
+  .ismobile {
+    padding: 2vh 0;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+  }
+  .ismobile a {
+    padding: 1vh 0;
+  }
+}
+@media screen and (max-width: 576px) {
+}

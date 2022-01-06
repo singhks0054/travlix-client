@@ -1,0 +1,25 @@
+.main {
+  width: 80vw;
+  text-align: center;
+  margin: 10vh 0vw 10vh 10vw;
+}
+.map {
+  height: 70vh;
+  background: url('https://source.unsplash.com/1000x400/?map');
+  background-size: 100%;
+}
+.map h1 {
+  font-size: 100px;
+  padding: 5vh 0px;
+  color: white;
+}
+@media screen and (max-width: 576px) {
+  .main {
+    width: 90vw;
+    text-align: center;
+    margin: 5vh 0vw 10vh 5vw;
+  }
+  .map {
+    height: 60vh;
+  }
+}
