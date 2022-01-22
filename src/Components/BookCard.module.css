@@ -1,0 +1,5 @@
+.tablerow td {
+  padding: 1vh 1vw;
+  background: rgb(117, 241, 117);
+  text-transform: capitalize;
+}

@@ -23,7 +23,7 @@ export default function Header(props) {
         <NavLink to='/news'>NEWS</NavLink>
         <NavLink to='/offer'>OFFERS</NavLink>
         <NavLink to='/contact'>CONTACT</NavLink>
-        <NavLink to='/user'>{isLogin ? 'USER' : 'LOG IN'}</NavLink>
+        <NavLink to='/login'>{isLogin ? 'USER' : 'LOG IN'}</NavLink>
       </nav>
       {
         openNav && <nav className={`${style.navlink} ${style.ismobile}`}>
@@ -32,7 +32,7 @@ export default function Header(props) {
           <NavLink to='/news'>NEWS</NavLink>
           <NavLink to='/offer'>OFFERS</NavLink>
           <NavLink to='/contact'>CONTACT</NavLink>
-          <NavLink to='/user'>{isLogin ? 'USER' : 'LOG IN'}</NavLink>
+          <NavLink to='/login'>{isLogin ? 'USER' : 'LOG IN'}</NavLink>
         </nav>
       }
       <div>

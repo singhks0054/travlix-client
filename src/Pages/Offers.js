@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import OfferCard from '../Components/OfferCard'
 import style from './Css/Offers.module.css'
 export default function Offers() {
+  const [offer, setOffer] = useState([])
+
+  useEffect(() => {
+    fetchData()
+    async function fetchData() {
+      const { data } = await axios.get('https://fierce-hollows-14162.herokuapp.com/offer')
+      setOffer(data)
+    }
+  }, [])
+
+
   return (
     <main className={style.offer}>
       <h2>THE BEST OFFERS WITH ROOMS</h2>
       <section className={style.offercon}>
-        <OfferCard _id={'abc01'} price={399} title={'HIMALAYAS'} />
-        <OfferCard _id={'abc02'} price={549} title={'HIMALAYAS'} />
-        <OfferCard _id={'abc03'} price={879} title={'HIMALAYAS'} />
-        <OfferCard _id={'abc04'} price={249} title={'HIMALAYAS'} />
+        {
+          offer.map((offer) =>
+            <OfferCard key={offer._id} _id={offer._id} price={offer.price} title={offer.title} description={offer.description} from={offer.from} to={offer.to} rating={offer.rating} />
+          )
+        }
       </section>
     </main>
   )

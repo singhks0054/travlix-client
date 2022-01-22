@@ -1,44 +1,23 @@
-.table {
-  background: palegreen;
+.main {
+  padding-top: 5vh;
+  width: 80vw;
+  margin: auto;
 }
-.head {
-  background: linear-gradient(
-    131deg,
-    rgba(245, 155, 37, 1) 18%,
-    rgba(108, 43, 207, 1) 79%
-  );
-  color: white;
-}
-.booking {
-  text-align: center;
+.form {
+  padding: 3vh 0;
+  width: 60vw;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 80vw;
-  margin: auto;
+  border: none;
+  outline: none;
 }
-.profile {
-  margin: 10vh auto;
+.btncontainer {
   text-align: center;
 }
-.link {
-  display: flex;
-  justify-content: space-around;
-  background: linear-gradient(
-    131deg,
-    rgba(245, 155, 37, 1) 18%,
-    rgba(108, 43, 207, 1) 79%
-  );
-  width: 80vw;
-  text-align: center;
-  border-radius: 10px;
-  padding: 1vh;
-  margin: auto;
-}
-
-.user {
-  width: 80vw;
-  margin: 7vh auto;
+.form input {
+  padding: 1vh 2vh;
+  margin: 1vh;
 }
 .btn {
   background: linear-gradient(
@@ -55,7 +34,8 @@
   cursor: pointer;
   border: none;
   transition: 1s;
-  margin: 7vh auto;
+  width: 20vw;
+  margin: 5vh auto;
 }
 .btn:hover {
   background: linear-gradient(
@@ -64,16 +44,28 @@
     rgba(245, 155, 37, 1) 78%
   );
 }
-.user div {
-  padding: 1vh 2vw;
-}
 @media screen and (max-width: 1400px) {
 }
 @media screen and (max-width: 1200px) {
 }
 @media screen and (max-width: 992px) {
+  .btn {
+    width: 30vw;
+  }
 }
 @media screen and (max-width: 768px) {
+  .btn {
+    width: 40vw;
+  }
 }
 @media screen and (max-width: 576px) {
+  .btn {
+    width: 60vw;
+  }
+  .main {
+    width: 100vw;
+  }
+  .form {
+    width: 85vw;
+  }
 }

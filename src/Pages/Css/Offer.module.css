@@ -8,6 +8,16 @@
   font-size: 100px;
   padding-top: 25vh;
 }
+.offercontainer {
+  margin-top: 5vh;
+  text-align: center;
+}
+.offers {
+  width: 80vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 @media screen and (max-width: 576px) {
   .main h1 {
     font-size: 50px;

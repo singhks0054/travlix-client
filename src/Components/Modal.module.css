@@ -7,7 +7,14 @@
   z-index: 10;
   background: rgba(0, 0, 0, 0.75);
 }
-
+.fform {
+  display: flex;
+  flex-direction: column;
+}
+.fform input,
+.fform select {
+  margin: 1vh 2vh;
+}
 .modal {
   position: fixed;
   top: 30vh;

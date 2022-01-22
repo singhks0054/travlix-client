@@ -12,7 +12,6 @@ import About from './Pages/About.js';
 import Offer from './Pages/Offer.js';
 import News from './Pages/News.js';
 import LabelForm from './Pages/LabelForm.js';
-import User from './Pages/User.js';
 import Login from './Pages/Login.js';
 
 function App() {
@@ -24,7 +23,7 @@ function App() {
       <Routes>
         <Route path={'/'} element={<>
           <Home />
-          <LabelForm />
+          <LabelForm navbar={true} />
           <Package />
           <Offers />
           <Review />
@@ -33,9 +32,10 @@ function App() {
         </>} />
         <Route path={'/about'} element={<><About /></>} />
         <Route path={'/offer'} element={<Offer />} />
+        <Route path={'/offer/*'} element={<h1 style={{ textAling: 'center' }} >Coming Soon</h1>} />
         <Route path={'/news'} element={<News />} />
+        <Route path={'/news/*'} element={<h1 style={{ textAling: 'center' }} >Coming Soon . . .</h1>} />
         <Route path={'/contact'} element={<ContactA />} />
-        <Route path={'/user'} element={<User />} />
         <Route path={'/login'} element={<Login />} />
       </Routes>
 

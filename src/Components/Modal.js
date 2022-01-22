@@ -29,6 +29,7 @@ const ErrorModal = props => {
   );
 }
 
+
 export default function Modal(props) {
   return (
     <>

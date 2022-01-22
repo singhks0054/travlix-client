@@ -1,11 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import style from './Css/About.module.css'
 import Button from '../Components/Button'
 import Prac from '../Components/Prac'
 import Modal from '../Components/Modal'
+import axios from 'axios'
 export default function About() {
 
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
+  const [heading, setHeading] = useState(null)
+  const [desc, setDesc] = useState(null)
+  const [num, setnum] = useState([])
+
+  useEffect(() => {
+    fetchData()
+    async function fetchData() {
+      const { data } = await axios.get('https://fierce-hollows-14162.herokuapp.com/about')
+      setHeading(data[0].heading)
+      setDesc(data[0].description)
+      setnum([data[0].client, data[0].project, data[0].countries, data[0].coffees])
+    }
+  }, [])
   const errorHandler = (e) => {
     e.preventDefault();
     setError(null);
@@ -19,15 +33,14 @@ export default function About() {
       <section className={style.sec2}>
         <img src="./images/greentree.webp" alt="" />
         <div>
-          <h1>WE HAVE THE BEST TOURS</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vulputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer elementum orci eu vehicula pretium. Donec bibendum tristique condimentum. Aenean in lacus ligula. Phasellus euismod gravida eros. Aenean nec ipsum aliquet, pharetra magna id, interdum sapien. Etiam id lorem eu nisl pellentesque semper. Nullam tincidunt metus placerat, suscipit leo ut, tempus nulla. Fusce at eleifend tellus. Ut eleifend dui nunc, non fermentum quam placerat non. Etiam venenatis nibh augue, sed eleifend justo tristique eu</p>
+          <h1>{heading}</h1>
+          <p>{desc}</p>
           <span className={style.btn}><Button to={'/offer'}>EXPLORE NOW</Button></span>
         </div>
       </section>
       <section className={style.sec3}>
         <h1>YEAR STATSICS</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nisi libero, magnam omnis, id voluptates esse delectus necessitatibus voluptate incidunt, temporibus consequuntur ducimus. Eveniet, illum.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nisi libero, magnam omnis, id voluptates esse delectus necessitatibus voluptate incidunt, temporibus consequuntur ducimus. Eveniet, illum.</p>
+        <p>The United Nations World Tourism Organization (UNWTO) estimates that internationally there were just 25 million tourist arrivals in 1950. 68 years later this number has increased to 1.4 billion international arrivals per year. This is a 56-fold increase.</p>
       </section>
       <section className={style.tile}>
         <h1>THAILAND</h1>
@@ -38,10 +51,10 @@ export default function About() {
       </section>
       <div>
         <div className={style.counter}>
-          <Prac till={255} title={'CLIENTS'} />
-          <Prac till={1176} title={'CLIENTS'} />
-          <Prac till={39} title={'CLIENTS'} />
-          <Prac till={127} title={'CLIENTS'} />
+          <Prac till={num[0]} title={'CLIENTS'} />
+          <Prac till={num[1]} title={'PROJECTS'} />
+          <Prac till={num[2]} title={'COUNTRIES'} />
+          <Prac till={num[3]} title={'COFFEES'} />
         </div>
       </div>
     </main>
