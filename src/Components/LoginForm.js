@@ -28,13 +28,14 @@ export default function LoginForm() {
           name: nameRef.current.value, email: emailRef.current.value, number: numberRef.current.value, address: adddressRef.current.value, password: passwordRef.current.value
         })
         setError(true)
-        setMessage(data)
-        authctx.login(data.token)
+        setMessage('Signed up Successfully')
+        authctx.login(data[1].token)
       } else {
         console.log(emailRef.current.value, passwordRef.current.value)
         const { data } = await axios.post('https://fierce-hollows-14162.herokuapp.com/user/login', {
           email: emailRef.current.value, password: passwordRef.current.value
         })
+        console.log(data);
         authctx.login(data.token)
       }
     } catch (error) {

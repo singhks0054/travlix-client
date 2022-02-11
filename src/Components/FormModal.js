@@ -31,7 +31,7 @@ const FormModal = props => {
       })
       setBookData([data.destination])
     }
-  }, [])
+  }, [authctx.token, props.id])
 
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -48,6 +48,7 @@ const FormModal = props => {
           'Authorization': `Bearer ${authctx.token}`
         }
       })
+      console.log(data);
     } catch (error) {
       setError('Invalid update')
     }

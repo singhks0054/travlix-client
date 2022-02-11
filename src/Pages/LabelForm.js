@@ -16,9 +16,11 @@ export default function LabelForm(props) {
   const child = useRef(null)
   const submitHandler = async (e) => {
     e.preventDefault()
-    setError(true)
-    setmessage('fill the form')
-    console.log(dest.current.value, from.current.value, to.current.value, adult.current.value, child.current.value)
+    if (!authctx.token) {
+      setError(true)
+      setmessage('Please Authenticate first !')
+      return
+    }
     const { data } = await axios.post('https://fierce-hollows-14162.herokuapp.com/booking', {
       from: from.current.value,
       to: to.current.value,

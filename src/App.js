@@ -30,7 +30,7 @@ function App() {
           <Trending />
           <Contact />
         </>} />
-        <Route path={'/about'} element={<><About /></>} />
+        <Route path={'/about'} element={<> <About /></>} />
         <Route path={'/offer'} element={<Offer />} />
         <Route path={'/offer/*'} element={<h1 style={{ textAling: 'center' }} >Coming Soon</h1>} />
         <Route path={'/news'} element={<News />} />

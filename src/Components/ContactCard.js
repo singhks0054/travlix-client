@@ -8,9 +8,11 @@ export default function ContactCard() {
   const subject = useRef('')
   const message = useRef('')
   const [info, setInfo] = useState('')
+  const [btnmessage, setBtnmessage] = useState('SEND MESSAGE')
   const [showMessage, setShowMessage] = useState(false)
 
   const submitHandler = async (e) => {
+    setBtnmessage('SENDING !')
     e.preventDefault();
     const enEmail = email.current.value
     const enName = name.current.value
@@ -21,6 +23,12 @@ export default function ContactCard() {
     })
     setShowMessage(true)
     setInfo(data)
+    setBtnmessage('SENT')
+    setBtnmessage('SEND MESSAGE')
+    email.current.value = ''
+    name.current.value = ''
+    subject.current.value = ''
+    message.current.value = ''
   }
 
   const errorHandler = (e) => {
@@ -38,7 +46,7 @@ export default function ContactCard() {
         <textarea ref={message} placeholder='MESSAGE' id="" cols="30" rows="10"></textarea>
 
         <div className={style.btncon}>
-          <button type='submit' className={style.btn} >SEND MESSAGE</button>
+          <button type='submit' className={style.btn} >{btnmessage}</button>
         </div>
       </form>
     </section>
